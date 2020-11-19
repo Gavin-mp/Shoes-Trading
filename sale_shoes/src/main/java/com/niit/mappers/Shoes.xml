@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapping.ShoesMapping">
+	<insert id="insertShoes">
+		insert into shoes (shoesname,shoesclass,s40,s41,s42,s43,s44,s45,s46,shoesimg,shoesprice) values (#{shoesname},#{shoesclass},#{s40},#{s41},#{s42},#{s43},#{s44},#{s45},#{s46},#{shoesimg},#{shoesprice})
+	</insert>
+	
+	<select id="selectAllShoes" resultType="Shoes">
+		select * from shoes
+	</select>
+	
+	<delete id="deleteShoes">
+		delete from shoes where shoesid = #{shoesid}
+	</delete>
+	
+	<select id="selectShoes" resultType="Shoes">
+		select * from shoes where shoesid = #{shoesid}
+	</select>
+	
+	<update id="updteShoes">
+		update shoes set s40 = #{new40},s41 = #{new41},s42 = #{new42},s43 = #{new43},s44 = #{new44},s45 = #{new45},s46 = #{new46},shoesprice = #{newprice} where shoesimg = #{shoesimg}
+	</update>
+	
+	<select id="selectImgShoes" resultType="Shoes">
+		select * from shoes where shoesimg = #{shoesimg}
+	</select>
+	
+	<select id="findShoes" resultType="Shoes">
+		select * from shoes where shoesname like "%"#{fshoesname}"%"
+	</select>
+	
+	<select id="selectShoesClass" resultType="String">
+		select distinct shoesclass from shoes
+	</select>
+</mapper>
