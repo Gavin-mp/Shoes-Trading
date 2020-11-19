@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapping.OrderMapping">
+	<insert id="insertOrder">
+		insert into orderinfo (orderuid,orderuname,orderutel,orderuaddress,ordersname,ordersnum,orderssize,ordersimg,ordersprice) values (#{orderuid},#{orderuname},#{orderutel},#{orderuaddress},#{ordersname},#{ordersnum},#{orderssize},#{ordersimg},#{ordersprice})
+	</insert>
+	
+	<select id="selectOrder" resultType="Order">
+		select * from orderinfo where orderuid = #{orderuid}
+	</select>
+	
+	<select id="selectAllOrder" resultType="Order">
+		select * from orderinfo
+	</select>
+	
+	<select id="findUserOrder" resultType="Order">
+		select * from orderinfo where (orderid like "%"#{orderfind}"%" or ordersname like "%"#{orderfind}"%") and orderuid = #{orderuid}
+	</select>
+	
+	<select id="findOrder" resultType="Order">
+		select * from orderinfo where orderid like "%"#{orderfind}"%" or ordersname like "%"#{orderfind}"%" or orderuname like "%"#{orderfind}"%"
+	</select>
+</mapper>
