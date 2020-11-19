@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapping.AdminMapping">
+	<insert id="insertAdmin">
+		insert into admin (adminid,adminpassword) values (#{adminid},#{adminpassword})
+	</insert>
+	
+	<select id="selectAdmin" resultType="Admin">
+		select * from admin where adminid = #{adminid}
+	</select>
+	
+	<select id="selectAllUser" resultType="User">
+		select * from userinfo
+	</select>
+	
+	<select id="selectAuser" resultType="User">
+		select * from userinfo where userid = #{userid}
+	</select>
+	
+	<update id="updateAuserState">
+		update userinfo set userstate = #{newstate} where userid = #{userid}
+	</update>
+</mapper>
