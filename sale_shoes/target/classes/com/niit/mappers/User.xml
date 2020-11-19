@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.niit.mapping.UserMapping">
+
+	<insert id="insertUser">
+		insert into userinfo (userid,useremail,userpassword,username,usergender,usertel,usershsize,userstate,useraddress) values(#{userid},#{useremail},#{userpassword},#{username},#{usergender},#{usertel},#{usershsize},#{userstate},#{useraddress})
+	</insert>
+	
+	<select id="selectUser" resultType="user">
+		select * from userinfo where userid = #{userid}
+	</select>
+	
+	<update id="updateUserPassword">
+		update userinfo set userpassword = #{newpassword} where userid = #{userid}
+	</update>
+	
+	<update id="updateUserInfo">
+		update userinfo set username = #{newname},usergender = #{newgender},usershsize = #{newshsize},useraddress = #{newaddress} where userid = #{userid}
+	</update>
+	
+	<select id="findUser" resultType="User">
+		select * from userinfo where userid like "%"#{userfind}"%" or username like "%"#{userfind}"%"
+	</select>
+	
+</mapper>
