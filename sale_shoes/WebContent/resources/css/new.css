@@ -1,0 +1,14 @@
+input[type="radio"] {
+    display: none;
+}
+input[type='radio'] + label:before{
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    border-radius: 6px;
+    border: 1px solid lightgray;
+}
+input[type='radio']:checked + label:before{
+    border: 1px solid black;
+}
