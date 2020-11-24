@@ -40,8 +40,16 @@ public class AdminController {
 	
 	@RequestMapping(value="/adminregister", method = RequestMethod.POST)
 	public String registerAdmin(Admin newAdmin) {
-		adminService.insertServiceAdmin(newAdmin);
-		return "adminlogin";
+		Admin admin = adminService.selectServiceAdmin(newAdmin.getAdminid());
+		if (admin == null) {
+			adminService.insertServiceAdmin(newAdmin);
+			return "adminlogin";
+		}else {
+			Frame frame=new Frame();
+			frame.setAlwaysOnTop(true);
+			JOptionPane.showMessageDialog((Component)frame, "您输入的账号已存在!", "账号重复", JOptionPane.ERROR_MESSAGE);
+			return "adminregister";
+		}
 	}
 	
 	@RequestMapping(value = "/adminlogin", method = RequestMethod.POST)

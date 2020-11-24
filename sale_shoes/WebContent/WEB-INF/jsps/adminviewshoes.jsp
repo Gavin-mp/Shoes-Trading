@@ -69,7 +69,7 @@
 					<td>${shoeslist.s44}</td>
 					<td>${shoeslist.s45}</td>
 					<td>${shoeslist.s46}</td>
-					<td>${shoeslist.shoesprice}</td>
+					<td>￥${shoeslist.shoesprice}</td>
 					<td><img src="<%=request.getContextPath()%>/${shoeslist.shoesimg}" style="width: 200px;"></td>
 					<td><a href="<%=request.getContextPath()%>/shoes/shoestochange?shoesid=${shoeslist.shoesid}">更改</a></td>
 					<td><a href="<%=request.getContextPath()%>/shoes/shoesdeleteone?shoesid=${shoeslist.shoesid}">删除</a></td>

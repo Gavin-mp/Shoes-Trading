@@ -42,7 +42,7 @@
 		</form>
 	</div>
 	<div>
-		<table class="table table-hover table-striped" style="width: 1200px; margin-left: 200px;">
+		<table class="table table-hover table-striped" style="width: 1200px; margin-left: 200px; margin-top: 40px;">
 			<tr>
 				<td class="col-sm-2">用户账号</td>
 				<td class="col-sm-2">用户名</td>

@@ -35,19 +35,19 @@
 		<form class="form-horizontal info-form" action="<%=request.getContextPath()%>/user/userchangepassword?userid=${user.userid}"  method="post">
 			<h3 class="info-form-title">&nbsp;&nbsp;&nbsp;&nbsp;修改密码</h3>
     		<div class="form-group">
-        		<label for="inputPassword" class="col-sm-4 control-label">账号:</label>
+        		<label for="inputPassword" class="col-sm-4 control-label">原密码:</label>
         		<div class="col-sm-8">
             		<input name="userpassword" required="required" type="text" class="form-control" id="inputPassword"  placeholder="Password">
         		</div>
     		</div>
     		<div class="form-group">
-        		<label for="inputNewPassword" class="col-sm-4 control-label">账号:</label>
+        		<label for="inputNewPassword" class="col-sm-4 control-label">新密码:</label>
         		<div class="col-sm-8">
             		<input name="newpassword" required="required" type="text" class="form-control" id="inputNewPassword"  placeholder="NewPassword">
         		</div>
     		</div>
     		<div class="form-group">
-        		<label for="inputRepeatPassword" class="col-sm-4 control-label">账号:</label>
+        		<label for="inputRepeatPassword" class="col-sm-4 control-label">重复密码:</label>
         		<div class="col-sm-8">
             		<input name="repeatpassword" required="required" type="text" class="form-control" id="inputRepeatPassword"  placeholder="RepeatPassword">
         		</div>

@@ -61,7 +61,7 @@
 					<td class="col-sm-3">${orderlist.ordersname}</td>
 					<td class="col-sm-1">${orderlist.orderssize}</td>
 					<td class="col-sm-1">${orderlist.ordersnum}</td>
-					<td class="col-sm-1">${orderlist.ordersprice}</td>
+					<td class="col-sm-1">￥${orderlist.ordersprice}</td>
 					<td class="col-sm-1">${orderlist.orderuname}</td>
 					<td class="col-sm-2">${orderlist.orderutel}</td>
 					<td class="col-sm-1">${orderlist.orderuaddress}</td>

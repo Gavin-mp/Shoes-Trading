@@ -62,7 +62,7 @@
 					<td class="col-sm-5">${orderlist.ordersname}</td>
 					<td class="col-sm-1">${orderlist.orderssize}</td>
 					<td class="col-sm-1">${orderlist.ordersnum}</td>
-					<td class="col-sm-1">${orderlist.ordersprice}</td>
+					<td class="col-sm-1">￥${orderlist.ordersprice}</td>
 				</tr>
 			</c:forEach>
 		</table>

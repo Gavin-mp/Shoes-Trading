@@ -45,13 +45,13 @@
     </nav>
 	<div style="margin-left: 200px;">
 		<div class="my-float">
-			<img src="<%=request.getContextPath()%>/${shoes.shoesimg}">
+			<img src="<%=request.getContextPath()%>/${shoes.shoesimg}" style="width: 600px;">
 		</div>
 		<div class="my-float" style="width: 500px;">
 			<br><br>
 			<h2>${shoes.shoesname}</h2>
 			<br><br>
-			<h1>${shoes.shoesprice}</h1>
+			<h1>￥${shoes.shoesprice}</h1>
 			<br><br>
 			<form action="<%=request.getContextPath()%>/order/orderadd">
 				<input type="hidden" name="orderuid" value="${user.userid}">
